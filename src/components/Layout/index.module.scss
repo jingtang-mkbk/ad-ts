@@ -1,0 +1,82 @@
+.logo {
+  height: 32px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.site_layout .site_layout_background {
+  background: #fff;
+}
+
+[data-theme="dark"] .site_layout .site_layout-background {
+  background: #141414;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+
+  .header_left{
+    display: flex;
+    align-items: center;
+
+    
+    p{
+      height: 64px;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .header_right{
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+
+    img{
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+}
+
+:global{
+  .ant-layout{
+    min-width: 1332px;
+  }
+
+  .ant-layout-sider-children{
+    background: url('../../assets/common/logBg.png');
+    background-size: cover;
+  }
+
+  .ant-menu-inline{
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .ant-menu-title-content{
+    color: #141414;
+  }
+
+  .ant-menu, .ant-menu-root, .ant-menu-vertical, .ant-menu-light, .ant-menu-inline-collapsed{
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .ant-layout-footer{
+    padding: 0 0 12px 0;
+  }
+}

@@ -1,0 +1,1421 @@
+Hyper Text Markup Language
+Cascading Style Sheets
+document object model
+browser object model
+JavaScript Object Notation
+
+404 	url或method错了
+401	没token
+400  422	传参错了
+301  302	重定向
+304	协商缓存
+500 	服务器问题
+
+不显示滚动条：
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+scss:
+导入css  import url（'xxxxx.css'）
+导入scss import 'xxxxx.scss'
+// 自定义
+@mixin abc{
+	bgc: red
+}
+@include abc
+
+@mixin radius($w){
+  width: $w;
+  height: $w;
+  border-radius: 50%;
+}
+@include radius(100px);
+
+
+
+
+
+
+代码片段
+snippet generate
+
+const path = require('path')
+hack:`true;@import "${path.resolve(__dirname,'./src/common/cover_vant.less')}";`
+
+取消选中
+window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty()
+
+_占位符
+
+ctrl d 选取同样的
+
+/* 将页面中所有标签的默认的内外边距清除 */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 将页面中所有的a的下划线清除 */
+a {
+    text-decoration: none;
+}
+/* 将页面中所有的li的默认样式清除 */
+li {
+    list-style: none;
+}
+
+li{$收购古古怪怪}*10
+
+属性选择器
+input外框线outline=none
+所有input type的边框都是虚线，1px，红
+input[type]{
+            border: 1px red solid;
+}
+input type=url的背景为pink
+input[type=url]{
+            background-color: pink;
+        }
+input type首字母t的背景老王绿
+input[type^=t]{
+            background-color: lawngreen;
+        }
+input type尾字母h的背景黄
+input[type$=h]{
+            background-color: yellow;
+        }
+input type=的中有m的边框虚线
+input[type*=m]{
+            border-style: dashed;
+        }
+<form action="网址">
+        文本框：<input type="text" name="" id="">   <br><br>
+        密码框：<input type="password" name="" id=""> <br><br>
+        日期控件：<input type="date" name="" id=""> <br><br>
+        日期控件2：<input type="datetime-local" name="" id=""> <br><br>
+        邮箱: <input type="email" name="" id=""> <br><br>
+        月份：<input type="month" name="" id=""> <br><br>
+        数字框：<input type="number" name="" id=""> <br><br>
+        搜索框：<input type="search" name="" id="">  <br><br>
+        电话：<input type="tel" name="" id="">  <br><br>
+        时间控件：<input type="time" name="" id="">  <br><br>
+        网址： <input type="url" name="" id="">  <br><br>
+        <br><br>
+        <button type="submit">提交</button>
+</form>
+
+ajax中form表单input加name属性
+提交的对象模式serialize(this, {hash: true})	字符串serialize(this, {hash: false})
+const fd = new FormDate(this);	fd.get('name属性值')
+
+
+<input maxlength="10"></input> 
+
+
+<br>		换行	blank row
+<hr>		水平线
+h1建议只使用一次，主要放网站logo
+
+<img src="01.jpg " alt="这是一张图" width="600" title="">
+
+<b></b> 
+<strong></strong>	加粗
+<i></i>
+<em></em>		倾斜
+<u></u>
+<ins></ins>		下划线
+<s></s>
+<del></del>		删除线
+
+空格	&nbsp 	no-break space
+小于	&lt	less than
+大于	&gt	greater than
+
+tr表示行，tr里嵌套th  td，th是表头单元格，td是普通单元格
+<table border="1" rules="all" cellpadding="10">
+	<tr>
+		<th>
+		
+		</th>
+	</tr>
+	
+	<tr>
+		<td>
+		
+		</td>
+	</tr>
+</table>
+
+跨行合并：上下合并 rowspan	 从上到下
+跨列合并：左右合并 colspan	 从左到右
+表格同类之间不能合并，thead不能和tbody合并
+
+多行复制：1、按着滚轮键往下拖
+	 2、shift+alt+鼠标左键
+	 3、shift+alt+ctrl+上下键
+
+
+<ul></ul>中只能放<li></li>
+<li></li>里面能放任何标签
+<dt></dt> <dd></dd>里面能放任何标签
+无序列表ul
+有序列表ol
+自定义列表dl
+
+input表单控件
+文本框input type="text"
+密码框input type="password"
+placeholder占位符，提示作用
+单选框type为radio
+复选框checkbox
+
+
+
+修改placeholder颜色
+text::placeholder{color}
+input::placeholder{color}
+
+修改文本框背景颜色
+input:focus{bgc}
+
+平铺bgr
+背景图位置bgp
+
+版心：只需要设置宽度
+
+margin外边距
+padding内边距
+border描边
+
+外边距塌陷：只设置其中一个的边距
+
+BFC：overflow：hidden
+display：flow-root
+
+cursor：default
+
+两位数：上下    左右
+三位数：上    左右    下
+
+超链接a target="_blank"   新窗口
+href上级路径   ../
+href下级/同级路径  ./
+下载链接  href取值为压缩包
+
+图片标签img
+alt替换文本，图片加载不出时提示
+title鼠标悬停提示
+
+表格标签table
+caption表格标题和tr是并列的
+
+一个标签只能设置一个class属性    class="类名1   类名2   类名3"
+
+font-style		一般设置倾斜，i  em也行
+line-height	行高=盒子高度
+
+文本缩进
+ti	text-indent 	px、em
+
+文本样式
+tdn	text-decoration:none
+tdu	text-decoration:underline
+tdo	text-decoration:overline
+tdl	text-decoration:line-through
+
+背景属性
+bgc	background-color
+bgi	background-image
+bgr	background-repeat
+bgp	background-position
+bga	background-attachment
+bgs	background-size
+
+结构伪类选择器
+.list li:first-child{}
+.list li:last-child{}
+.list li:nth-child(){}
+选择偶数
+.list li:ntd-child(){}	括号里取even或2n
+选择奇数
+.list li:ntd-child(){}	括号里取odd或2n+1
+选取前三个
+.list li:ntd-child(-n+3){}
+选取第18个到最后一个
+.list li:ntd-child(n+18){}
+选取3的倍数
+.list li:ntd-child(n+18){}
+
+nth-of-type选择器
+第一个
+.box   p:first-of-type{}
+最后一个
+.box   p:last-of-type{}
+前三个
+.box   p:nth
+
+优先级
+!important  > 行内样式  > id选择器 > 类选择器 > 标签选择器  >  继承性/通配符  权重为0
+ 	        1,0,0,0          0,1,0,0        0,0,1,0         0,0,0,1   
+
+a:hover{
+	color=red;
+	transform: translateY(-5px);	上移5px
+}
+
+圆角:border-radius
+
+background-position：-300px -200px
+
+box-sizing   减边框  盒子撑大用
+
+overflow   BFC模式
+
+span行内元素
+
+移动效果：transition: all .3s
+
+固定定位:
+left:50%
+margin-left:620px	版心的一般+间隔
+
+box-shadow: 0  2px  5px rgba(000 30%)
+
+块元素：h1-h6   p   div   ul   ol  li
+行内元素：span   a   i   em   b   strong   u   ins   s   del
+行内块元素：img   input   button
+
+转译\   
+content:'\e61d';
+font-family:iconfont
+
+单行文本溢出省略显示
+whiite-space:nowrap
+overflow:hidden
+text-overflow:ellipsis
+溢出文字一行显示示例
+<p class:"sin-line"><\p>
+
+渐变色
+线性background-image:linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,.8))
+径向background-image: radial-gradient(at 10px 10px,red, blue)
+
+引入图标：<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<span class:"iconfont icon-yjt"></span>  有网
+<span class:"iconfont">xxxxxx</span>     没网
+
+transform:translate(100px,10px)
+
+盒子居中
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+transform: rotate()
+平移、旋转一起，transform：translate(100px) rotate(360deg)
+缩放transform: scale()
+
+2d视图：perspective=1000px
+transform-style:preserve-3d
+transform: translate3d(x, y, z)
+
+@keyframes donghua{
+	form{width:200px;   height:200px}
+	to{width:1000px;    height:600px}
+}
+.box{
+	animation: donghua  2s  steps(5)  infinite    五步完成
+}
+
+div:hover{
+	animation-play-state: paused;
+}
+
+移动端flex
+display: flex
+justify-content: center居中   space-around space-evenly space-between flex-strat  flex-end
+align-self单独设置一个盒子的辅轴样式，那个盒子需要在那个盒子里写
+
+div nth-child(3)  先找第三个儿子，在确定是不是div
+div nth-of-type(3) 第三个div
+
+弹性盒子换行：flex-wrap：wrap
+设置单个子盒子的对齐属性align-self：
+
+媒体查询（width：320px）{       //width不能价分号
+	html{font-size：10px；}
+}
+
+<script src="./js/flexible.js"></script>
+
+less注释    //     /*   */   shift + alt +a
+
+@变量名：值；
+引入其他less文件：
+@import “地址”
+@import url（“地址”）
+
+less是预处理器，不是语言，css也不是语言
+less导出路径，json里设置
+"less.compile": {
+        "out": "../css/"
+    },
+
+文件内导出：放第一行
+// out  :  ./css/文件名.css
+不到处：
+out：false
+
+后面定位的会盖住前面定位的，z-index
+
+rem取1/10的手机宽，引入flexible.js
+vw/vh取1/100的手机宽，不引入
+
+先引入script jquery 在引用script src bootstrap。js
+
+js可不加；
+
+alert  prompt 会卡住代码执行
+
+console.log('')	alert('')	document.write('')		prompt()		confirm('')
+
+let   var可重复声明，不使用
+
+查询数组长度，console(arr.length)
+
+不透明度opacity：1显示
+
+定义常量要赋值
+
+转译\
+
+五种数据类型：数字、字符、布尔、undefined、null
+
+隐式转换-数字：let a = + '25'   let a =  '25' -  0      let a = '25'  *  1    取整parseInt（）   parseFloat（）
+隐式转换-字符：let a = 25 + ''
+显式转换：Number（）   String（）    xx.toString()    Boolean()
+
+转Boolean是false的  0、''、null、undefined、NaN
+
+++i  先++再赋值，i++先赋值再++
+
+除了NaN所有的值都等于它本身
+
+三元运算符：                      条件？  代码1  ：代码2；
+
+枚举类型：let person = {name：‘pink’，  age：18， addr：‘杭州‘ }
+获取person.name
+
+构造函数：function Person（uname,  gender,  age）{
+	this.name  =  uname; 
+	this.gender  =  gender;
+	this.age  =  age;
+ }
+获取Person.name
+新建一个对象：let  zhangsan  =  new  Person（‘张三’，‘男’，‘18’）；
+新增：shangsan.atk = 1000；
+ 
+
+let fun = function（a，b）{	console（a+b）	 }  	fun（10，20）
+
+for（；；）死循环
+
+伪数组具有索引值，具有length，其他无。伪数组不能直接操作，通过索引操作
+
+arr.push（‘马超’）；     arr.push（arr2[1]）  	   放在arr的最后一个
+arr.unshift（‘赵云’）；  arr.unshift（arr2[1]）      放在arr的开头
+arr.pop（‘关羽’）；       arr.pop（）		   删除arr最后一位并返回
+arr.shift（‘张飞’）；      arr.shift（）		   删除第一个并返回
+arr.splice（‘张三’）；    arr.splice（起始下标，删除个数并返回） 	arr.splice（2，1）；   arr.splice（2，1，‘小点点’）；	删除的位置换成小点点   
+arr.indexOf（arr[i]）；  	去重
+arr.reverse()；		数组倒序
+
+升序排列：a -  b     降序排列 ：b  -  a
+arr.sort（function （a， b）{
+	return   a  -  b
+}）
+
+let fn = function（）匿名函数
+function  fn（）	 命名函数
+
+立即执行函数：
+（function（）{console.log（11）}）（）；
+（function（）{console.log（11）}（））；
+
+
+访问属性.   或者[]        .访问固定属性，[]访问动态属性
+forin
+for（let k in obj）{
+	console.log（k）；  	打印枚举类型属性名
+	console.log（obj[k]）；	打印枚举类型属性值
+}
+
+Math方法：
+Math.floor (Math.random() * (max - min + 1) + min)
+Math.max()   Max.min()    里面放数组：Max.min(...arr)
+/*固定值*/
+console.log("PI = " + Math.PI);
+console.log("E  = " + Math.E);
+/*正数*/
+console.log(Math.abs(1));        //可以用来计算一个数的绝对值
+console.log(Math.ceil(1.1));     //可以对一个数进行向上取整，小数位只有有值就自动进1
+console.log(Math.floor(1.99));   //可以对一个数进行向下取整，小数部分会被舍掉
+console.log(Math.round(1.4));    //可以对一个数进行四舍五入取整
+/*负数*/
+console.log(Math.abs(-1));       //可以用来计算一个数的绝对值
+console.log(Math.ceil(-1.1));    //可以对一个数进行向上取整，小数部分会被舍掉
+console.log(Math.floor(-1.99));  //可以对一个数进行向下取整，小数位只有有值就自动进1
+console.log(Math.round(-1.4));   //可以对一个数进行四舍五入取整
+/*随机数*/
+//Math.random()：可以用来生成一个0-1之间的随机数
+//生成一个0-x之间的随机数：Math.round(Math.random()*x)
+//生成一个x-y之间的随机数：Math.round(Math.random()*(y-x)+x)
+console.log(Math.round(Math.random() ));            //生成一个0-1之间的随机数
+console.log(Math.round(Math.random() * (10 - 1) + 1));  //生成一个1-10之间的随机数
+/*数学运算*/
+console.log(Math.pow(12, 3));   //Math.pow(x,y)：返回x的y次幂
+console.log(Math.sqrt(4));      //Math.sqrt(x) ：返回x的平方根
+
+
+Date方法：
+let date = new Date("2020-10-18 11:15:30");
+       
+date.getTime();
+Date.parse(date)/1000;	//从1970开始有多少秒
+date.getFullYear();         // 2020    年
+date.getMonth()+1;          // 10      月
+date.getDate();             // 18      日
+date.getDay();              // 0       星期
+date.getHours();            // 11      小时
+date.getMinutes();          // 15      分钟
+date.getSeconds();          // 秒      30
+date.getMilliseconds();     // 0       ms
+
+ d = parseInt(总秒数/ 60/60 /24); // 计算天数
+ h = parseInt(总秒数/ 60/60 %24) // 计算小时
+ m = parseInt(总秒数 /60 %60 ); // 计算分数
+ s = parseInt(总秒数%60); // 计算当前秒数
+
+
+document.body	body
+document.documentElement		html
+
+classList.add()	classList.remove()		classList.toggle()切换	classList.contains()检测
+
+自定义属性：html不区分大小写
+<div data-price='1000', data-shopid>123</div>
+const div = document.querySelector('div');
+console.log(div.dataset.shopid);
+
+let timer = setInterval(函数，1000);
+clearInterval(timer);
+
+事件：click    dblclick     
+mouseenter/mouseleave（无冒泡效果）     mousemove	mouseover/mouseout（有冒泡效果）
+focus 	blur 	
+keydown 	Keyup
+scroll    resize     load
+
+.addEventListener('mouseenter', function(){});
+
+窗口相对位置：client X，clientY
+文档相对位置：pageX，pageY
+当前元素相对位置：offsetX，offsetY
+
+window.addEventListener('scroll', function(){
+	document.documentElement.scrollTop;    //滚出去window的距离
+});
+
+事件开启捕获阶段      .addEventListener{'click',  function(){},  true}    
+默认冒泡阶段，只能开启一个
+
+阻止冒泡：p.addEventListener('click', function(e){
+            console.log('p');
+            e.stopPropagation();        });
+
+平滑过渡到顶部
+html{
+            scroll-behavior: smooth;
+        }
+
+只能获取，修改style
+const div = document.querySelector('div');
+        // 内容 + padding
+        console.log( div.clientHeight, div.clientWidth);
+        
+        // 内容 + padding + border
+        console.log(div.offsetHeight, div.offsetWidth);
+
+e.target.dataset.name获取自定义属性
+
+offsetLeft、offsetTop	元素的距离
+scrollLeft、scrollTop	卷去的距离
+offsetWidth、offsetHeight	内容+padding+border
+clientWidth、clientHeight	内容+padding
+
+子.parentNode = 父标签
+父.children = 所有子标签（为元素数组）
+兄弟.previousElementSibling = 上一个元素兄弟
+兄弟.nextElementSibling = 下一个元素兄弟
+元素.createElement（‘标签名。’）
+移动元素append
+增加节点：父.appendChild（要插入的元素）
+	父.insertBefore（插入元素，在那个元素前面）
+删除节点：父元素.removeChild（要删除的元素）
+insertAdjacentHTML
+
+下拉菜单：
+<select name="city" class="city">
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+      <option value="曹县">曹县</option>
+</select>
+
+取消button的默认提交
+.addEventListener('submit', function(e){
+        e.preventDefault();  });
+
+location.href = 'http://www.baidu.com';
+history.back(); 	history.forward(); 	history.go(1);
+
+存到本地：
+localStorage.setItem(u);
+const uname = '张三';
+localStorage.setItem('userName', uname);
+localStorage.getItem('userName');
+localStorage.removeItem('userName');
+localStorage.clear()
+
+session和上面方法一样，但关闭浏览器就没了
+
+
+对象转化字符串
+JSON.stringify(   需转化的对象   )
+从浏览器取出来的字符串转化为对象
+JSON.parse（   取出来的字符串   ）
+
+map遍历
+第一个参数代表数组的每一项
+第二个参数代表每一项的索引值
+arr.map(function(item, index, o){
+     console.log(item, index, o);
+});
+
+数组拼接
+let arr = ['a', 'b', 'c', 'd'];
+console.log(arr.join(''));    //abcd
+
+正则：
+以xxx开头：const  reg  =  /^abc/;
+以xxx结尾：const  reg  =  /abc$/;
+reg.test('abc');
+ {n}     重复n次
+{n,}    >= n
+ {n, m}  n到m次
+const reg = /^a{3}$/;
+ +     >= 1次
+const reg = /^a+$/;
+*   出现的>= 0 次
+const reg = /^a*$/;
+?     0或1次
+const reg = /^a?$/;
+精确匹配大小写的a-z 0-9 _   -
+const reg = /^[a-zA-Z0-9_-]$/;
+ 精确匹配abc其中一个
+const reg = /^[abc]$/;
+/^[^a-zA-Z]$/  	[]里面的^表示取反，匹配除大小写a-z意外的任何字符
+.    匹配除了\n之外的任意单字符
+const   reg  =  /^.$/;
+匹配任意一个单字符
+const   reg  =  /^（.|\n）$/;
+\d 	[0-9]
+\D	[^0-9]
+\w 	[a-zA-Z0-9]
+\W	[^a-zA-Z0-9]
+\s	[\t\r\n\v\f]
+\S	[^\t\r\n\v\f]
+
+js放最前面加window.addEventListener('load', function(){   });
+
+.trim()，去掉前后空格
+
+变量提升：var定义、函数会在最上执行（预解析）
+
+箭头函数：简化匿名函数
+let fn = function(){}
+let fn = () => {}
+箭头函数不存在this，箭头函数里面的this指向上一级
+如果函数体只有一行代码，可以写到一行上，并且无需写 return 直接返回值
+
+const [a,   b,   c]   =   [1,   2,  3,  4];
+a=1    b=2   c= 3
+剩余值取法：const[a,  b,  ...c] = [1, 2, 3,4, 5, 6]	a=1  b=2  c是3 4 5 6 的数组
+按需取值：const  [ ,  a,  ,  b] = ['张飞'， '赵云'， '关羽'，'刘备']   a=赵云  b=刘备
+多维数组：
+const [,a ,  , [, b, ]] = ['张飞'， '赵云'， '关羽'，['刘备'，'武松'，'二狗']]
+
+获取id   #
+获取name   [name=]
+
+arr.forEach(function(item, index, o)){}
+item：当前项	index：当前项索引值	o：源数组
+
+Object.assign (新对象，旧对象);   拷贝对象，重名的覆盖
+
+forEach  filter   map   reduce
+
+const arr = [1, 2, 3, 4];
+let re = arr.reduce(((prev, item) => prev + item), 0);
+console.log(re);
+
+Array.from(arr) 	伪数组转真数组   arr要有length
+
+Array方法：
+Array.every() 	是否满足条件，返回一个布尔值
+Array.concat()	合并两个或多个数组，arr1.concat(arr2, arr3, arr4)	    返回的是一个新数组
+Array.filter()		
+Array.forEach()	遍历，无返回值
+Array.from()	伪数组转化位数组，一定要有length
+Array.join()	将一个数组的所有元素连接成一个字符串并返回这个字符串，join（）用，连接，join（''）没有连接符
+Array.map()	将原数组中的每个元素处理后返回一个新数组    item i
+Array.some()	测试数组中是不是至少有 1 个元素通过了被提供的函数测试，返回一个Boolean值
+Array.pop()	从数组中删除最后一个元素，并返回该元素的值
+
+
+
+Number方法：
+Number.toFixed(index) 	保留index位小数，不写index舍去小数位,四舍五入
+
+
+String方法：
+String.split()	使用指定的分隔符字符串将一个String对象分割成子字符串  数组
+String.substring()	
+String.startWith()	前字符串是否以另外一个给定的子字符串开头，返回boolean	console.log('Saturday night plans'.startsWith('Sat'));	// true
+String.includes()	判断一个字符串是否包含在另一个字符串中，返回boolean	'Blue Whale'.includes('blue'); // returns false
+
+
+Object方法：
+Object.assign()	Object.assign (新对象，旧对象); 新对象 = 新 + 旧， 重名的覆盖
+Object.keys()	key值
+Object.values()	返回对象的所有值并存入一个数字
+
+继承：   function定义的
+A.prototype = new B();
+A.prototype.constructor = A;
+
+function Pesson() {
+            this.arms = 2;
+            this.legs = 2;
+            this.head = 1;
+            this.mouse = 1;
+            this.eat = function(){
+                console.log(2);
+            }
+        };
+function Chinese(){
+       this.language = 'Chinese';
+            this.skin = 'yellow';
+ }
+function Janpanese(){
+       this.language = 'Japanese';
+       this.skin = 'yellow';
+}
+
+Chinese.prototype = new Pesson();
+Chinese.prototype.constructor = Chinese;
+const c1 = new Chinese();
+console.log(c1);
+
+Janpanese.prototype = new Pesson();
+Janpanese.prototype.constructor = Janpanese;
+const j1 = new Janpanese();
+console.log(j1);
+
+
+继承：class定义的类  react中要继承另一个类
+class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            speak(){
+                console.log(`my name is ${this.name}, age is ${this.age}`)
+            }
+        }
+
+        const p1 = new Person('tom', 19);
+        const p2 = new Person('jack', 20);
+
+        console.log(p1);
+        console.log(p2);
+        p1.speak();
+        p2.speak();
+
+        class Student extends Person{
+            constructor(name, age, grade){
+                super(name, age)   //继承 
+                this.grade = grade;
+            }
+            speak(){
+                console.log(`my name is ${this.name}, age is ${this.age},grade is ${this.grade}`)
+            }
+            study(){
+                console.log(`${this.name} study hardly`)
+            }
+        }
+
+
+
+instanceof	判断构造函数的prototype是否在实例对象的原型链上
+
+浅拷贝：只拷贝一层
+深拷贝：拷贝所有层	 	let o = JSON.parse(JSON.stringify(obj)) 将obj拷贝给o
+lodash
+
+节流：function thorttle(fn ,t){
+            let startTime = 0;
+            return function(){
+                let now = Date.now();
+                if(now - startTime >= t){
+                    fn();
+                    startTime = now;
+                }
+            }
+        }
+
+
+
+
+
+axios：https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js
+基地址：axios.defaults.baseURL = "http://。。。。。。.net";
+
+axios
+增加对象data{
+	属性: 上传的值，
+	属性：上传的值
+}
+删除对象：http：xxxx?属性=  +‘值’
+get,delete    	params
+post,put		data
+
+自定义用户片段文件：
+设置——配置用户代码片段——新建全局代码片段文件
+
+if（e.key === ’Enter‘）
+
+XML   JSON  formdata.files
+
+Promise的状态只能改变一次 	fulfilled	pending 	  rejected
+.then（res => console.log(res)，err => console.log(err)）	Promise成功res，失败err    不用catch也能抓错误
+.finally     执行的函数在.then前，.then是异步,  所以.finally先执行
+
+toString.call（需查询类型的数据）
+console.log(Object.prototype.toString.call(需查询类型的数据))    [object  Object]   [object  Array]
+
+同源策略：协议http、https，域名www.baidu.com，端口：默认80
+
+JSONP：src标签发请求
+
+git add . 		整个文件夹git
+git commit -m描述
+git push
+git clone 地址
+git pull
+git branch tj/login		创建分支
+git branch -d 分支名	删除分支
+git checkout -b		创建分支并切换过去
+git checkout tj/login	切换分支
+git merge	 tj/login
+
+新建仓库：
+git init
+git add . 
+git commit -m描述
+git remote add origin git@gitee.com:mkbk-t/echart.git
+git push -u origin "master"
+
+
+try{
+
+} catch(err){
+}
+
+echarts折线图渐变：
+areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: "#499FEE",
+            },
+            {
+              offset: 0.8,
+              color: "rgba(255,255,255,0.2)",
+            },
+            {
+              offset: 1,
+              color: "rgba(255,255,255,0)",
+            },
+          ]),
+        },
+
+数组方法：some找到对的返回true，并停止。空数组false
+	every找到错的返回true，并停止。空数组true
+
+高阶函数：
+	1、A函数接受的参数是一个函数
+	2、A函数的返回值是一个函数
+
+
+
+
+
+
+
+
+
+
+create-react-app 项目名
+jsx语法：
+定义虚拟DOM，不写引号
+标签中混入JS要用{}
+不能用class 而是className
+内联样式style={{key:value}}
+根标签必须闭合	<input type="text"/>
+
+折叠 ： //#region		//#endregion
+render里面的注释： 	{/*<button>login</button>*/}
+
+卸载组件：ReactDOM.unmountComponentAtNode(document.querySelector('#test'))
+
+组件挂载调用一次：componentDidMount（）{}
+
+组件将要卸载时调用：componentWillUnmount（）{}
+
+生命周期：布尔值
+componentWillMount（）		组件将要挂载的钩子
+componentDidMount（）		组件挂载完毕的钩子          	常用
+componentWillUnmount（）		组件将要卸载的钩子		常用
+shoulComponentUpdate（）		控制组件更新的阀门
+componentWillUpdata（）		组件将要更新的钩子
+componnetDidUpdata（）		组件更新完毕的钩子
+componentWillReceiveProps（）	组件将要接受新的钩子	
+
+%PUBLIC_URL%代表public文件夹的路径
+
+manifest		应用加壳
+noscript		不支持js显示标签内容
+
+18版本后不支持React.render
+import { createRoot } from 'react-dom/client';
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
+
+简写成：createRoot(document.querySelector('#root')).render(<App/>)
+ 
+// 被注释的是之前ReactDOM.render的代码
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+
+函数式组件：
+const [count, setCount] = React.useState
+
+写[]相当于componentDidMount
+
+const myRref = React.useRef()
+
+<Fragment></Fragment> 能传一个key
+
+React.useEffect(()=>{
+	
+}, )
+检测谁写谁，不写全检测，[]都不检测     []只执行一次，可发请求
+
+useEffect可以使用多次
+useEffect里获取接口数据单独（async function fn（）{
+	const data =  await axios({....})
+}）()
+uesEffect( () => {} ) 			componentDidMount,    componentDidUpdate
+useEffect( () => {}, [] )		componentDidMount
+useEffect( () => () => {} )		componentWillUnMount
+
+422	请求格式错误
+
+setTimeout最小时间4ms
+
+
+webpack:
+yarn init
+yarn add webpack webpack-cli -D
+package.json里加上scripts: {
+			"build": "webpack"
+		            }
+
+exact精准匹配 	没问题别开
+
+NavLink和Link都能设置样式，但只有NavLink可以设置样式，
+被点击就会追加activeClassName里面的样式，activeClassName="active"
+
+antd按需引入样式配置：
+npm i react-app-rewired customize-cra
+根目录创建config-overrides.js文件
+npm i babel-plugin-import
+config-overrides.js里面写入+ const { override, fixBabelImports } = require('customize-cra');
+
++ module.exports = override(
++   fixBabelImports('import', {
++     libraryName: 'antd',
++     libraryDirectory: 'es',
++     style: 'css',
++   }),
++ );
+修改antd样式：
+npm i less less-loader
+
+函数路由跳转：
+import { useNavigate } from 'react-router-dom';
+  const navigate = useNavigate();
+      <NavBar onBack={() => navigate('/login')}>注册</NavBar>
+img 引入本地图片 src={require(路径)}
+
+渲染字符串数据：	
+  const html = {__html: htmlString};	
+
+  return (
+      <div dangerouslySetInnerHTML={html}></div>
+  )
+
+组件icon：
+<TabBar.Item  icon={<i className="iconfont icon-xxxx">}/>
+外部的iconfont     在index.js中引入
+
+react懒加载：
+const Login = lazy(()=>import('../pages/Login'))
+
+
+路由重定向：
+path:'/', render={()=><Navigate to='/layout'/>}
+path: '/login',
+element: <Suspense fallback={<div>loading。。。</div>}><Login/></Suspense>
+
+修改组件样式：
+css：
+:global(.ant-input-search-icon:before){
+      border-left: initial;
+}
+
+less、scss:
+:global{
+        .ant-input-search-icon:before{
+          border-left: initial;
+        }
+}
+
+展开运算符修改对象中某一项的值：
+data:{
+	...preData,	//原值
+	[data]:  true	//现在的值
+}
+
+useNavigate传参：
+
+https://blog.csdn.net/m0_70718568/article/details/127779167
+
+传：
+search：
+   navigate('/Detail?name=tom&age=18') 	
+params：
+    navigate('/About/jack')
+state：
+    navigate('/Detail/Shop', { state: {name:'tom',age:"20"} })
+
+路由：
+[
+      {
+        path: '/Detail',
+        element: <Detail></Detail>,
+        children: [
+          {
+            path: 'Shop',
+            element:<Shop></Shop>
+          }
+        ]
+      },
+      {
+        path: '/About/:name',
+        element:<About></About>
+      }
+]
+
+接：
+search：
+import { useSearchParams } from 'react-router-dom'
+const [search,setsearch] = useSearchParams()
+console.log(search.get('name'))
+console.log(search.get('age'))
+
+params：
+import { useParams } from 'react-router-dom'
+console.log(useParams())
+
+state：
+import { useLocation } from 'react-router-dom'
+const state = useLocation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v-bind 简写：
+v-on简写@
+
+v-if v-show 	频繁切换v-show	不频繁v-if
+v-model
+DOM: 	<input v-model="msg"/>
+	原生<input :value="msg" @input="msg=$event.target.value">
+
+组件:  	<MyInput v-model="msg"/>
+	原生 <MyInput :value="msg" @input="msg=$event">
+
+vue create 项目名
+
+子传父：@click=“$emit('myClick'， 要传的值)”
+父接：@myClick=“函数（$event）”
+
+子传父：this.$emit('事件名'，参数1，参数2，参数3)
+父接：@事件名=“函数（参数1，参数2，参数3）”
+
+
+vue类名class
+不变的属性正常写
+<div class=“aaa” :class="['box', 'box1']"></div>	多个样式是放一个数组
+<div class=“aaa” :class="{box：true}"></div>
+：style：”{fontSize=40px}“	
+：style：”obj“	obj = {fontSize=40px}	
+
+v-pre	不解析，给固定的加
+v-once	初次渲染执行一次，以后为静态
+v-show 	通过display：block none 	频繁用show
+v-if	是否渲染 	能和template配合使用
+template解析时不影响  div可能影响样式
+	
+
+对象增加属性不是响应式，数组[]不是响应式
+增加属性this.$set(this.对象，key， value)是响应式
+	this.$set(this.数组，index，value)响应式
+监视watch
+a:{
+	immediate: true	// 初始化让handler调用
+
+	handler(newValue, oldValue){
+		
+	}
+}
+deep：true深度监视 ，多级结构中所有属性的变化
+watch里可执行异步，computed不能异步
+
+vue可检测到数据变化的数组方法：push、pop、shift、unshift、splice、sort、reverse
+这七个方法是重新封装的
+
+自定义指令
+全局方法：
+Vue.directives:{
+	aaa:{
+		指令绑定时
+		bind(){}
+
+		指令被插入页面
+		inserted(){}
+
+		指令所在的模板更新时
+		update(){}
+	}
+}
+directive里命名带-带‘’  bebab-case命名
+
+生命周期钩子：
+创建：beforeCreate		created
+挂载：beforeMount	mounted
+更新：beforeUpdate	updated
+销毁：beforeDestory	destoryed
+
+created		ajax
+mounted		DOM
+beforeDestory	清除定时器
+
+ref=“aaa”
+this.$refs.aaa	获取ref为aaa的标签
+
+父传子，props接到的值不能修改
+props：{
+	name:{
+		type:String,	类型
+		required: true	必要的
+	}
+}
+
+this.$set(todo, 'isEdit', true)给todo增加一个isEdit属性   有set和get属性
+
+todo.isOwnProperty('aa')	todo是否有aa这个属性
+
+插槽：
+<template name="name">  等价于<template v-slot:name>
+只在template里可以写v-slot
+
+vuex:
+mapState		mapGetters	写在computed
+mapActions	mapMutations	写在method
+...mapMutations（['fn1'，'fn2']）
+
+import {mapState, createNamespaceHelpers} from 'vuex'
+const {mapState: mapState1} = createNamespaceHelpers
+
+有命名冲突
+全部在一个state里时：
+...mapState(['data1', 'data2', 'data3'])
+分组件写：
+...mapState('组件1', ['data1', 'data2', 'data3'])
+...mapState('组件2', ['data1', 'data2', 'data3'])
+解决方法：重新命名位count1
+...mapState('组件1',{
+	count1:	(state)=> state.count
+})
+
+
+
+
+vue表单阻止提交 @submit.prevent="fn"
+
+事件总线：
+beforeCreate
+Vue.prototype.$bus = this
+发：this.$bus.$emit('fn'，data)
+收：mounted(){
+	this.$bus.$on('fn', data =>{})
+}
+beforeDestory(){
+	this.$bus.$off('fn')
+}
+
+路由字符串参数：
+<router-link  :to="`/home/msg/detail   ?id=${xxx}  &  title=${xxx}  `"></router-link>
+
+路由query参数：
+<router-link :to="{
+	如果路由命名了，用name：'路由名字' 替换path:'/home/msg/detail'
+	path:'/home/msg/detail'
+	query:{
+		id: xxx,
+		title: xxx	
+	}
+}"></router-link>
+
+路由params参数：
+只能name，不能path
+深度选择器：
+::v-deep		/deep/	改子组件的根标签
+
+v-html：
+<p v-html="xxxx"></p>
+
+打包：publicPath： './'
+
+图片加载失败事件
+onerror=""
+
+.sync是一个语法糖
+
+动画：
+由v-if  v-show触发
+使用过渡动画的元素被<transtion name:"abc"></transtion>
+或<transtion-group v-for="" name=""></transtion-group>包裹
+使用name属性时，自定义类名
+进
+v-enter-from		初始状态
+v-enter-to 	最终状态
+v-enter-active	过渡效果	
+.v-enter-from{
+	transform: translateX(100px)
+}
+.v-enetr-to{
+	transform: translateX(0)
+}
+.v-enter-active{
+	transition: all .8 ease
+}
+
+出
+v-leave-from	
+v-leave-to
+v-leave-active
+
+
+
+
+
+
+防抖节流
+function debounce(fn,delay){
+    let timer 
+    const args = arguments 
+    return function(){
+        clearTimeout(timer)
+        timer = setTimeout(()=>{
+            fn.apply(this,args)
+        },delay)
+    }
+}
+
+function throttle(fn,delay){
+    let timer 
+    const args = arguments 
+    return function(){
+        if(timer)return 
+        timer = setTimeout(()=>{
+            fn.apply(this,args)
+            timer = null 
+        },delay)
+    }
+}
+
+数组扁平化
+1. arr.flat(Infinity)
+2. arr.toString().split(',').map(item=>parseInt(item))
+3. JSON.parse('['+JSON.stringify(arr).replace(/\[|\]/g,'')+']')
+
+
+
+
+
+
+
+
+ts：
+类型：
+number
+string
+boolean
+字面量		string | number 
+any		会霍霍别人
+unknown		是一个类型安全的any
+void
+never
+object
+array
+tuple		元组：固定长度的数组
+enum
+
+类型断言：
+a的类型是string
+<string> a
+a as string
+
+返回值a的类型是number
+function fn() :number (
+	return a
+)
+
+age位可选属性
+let a: {name: '张三'，age?: number}
+
+let a: Array<number>
+let a: number[]
+
+元组：
+let a: [string, number]
+h = ['hello', 123]
+
+
+interface扩展接口  多次定义即可  
+interface xxx {}
+interface A {x: number, y: string}
+interface B extends A {z: boolean}
+
+type只能定义一次
+tyep xxx = {}
+
+元组
+const arr: [number, string] = [1, 'a']
+
+typeof
+const p = { x: 1, y: 2 }
+function fn( point: typeof p ){}	point的类型和p一样
+
+impelents 实现接口
+
+class类中   
+let p1: Point3D = new Point2D   类型多的可以赋值给类型少的    2D > 3D
+
+type
+type F1 = (a: number) => void
+type F2 = (a: number, b: number) => void
+let f1: F1
+let f2: F2 = f1	函数参数少的可以赋值给多的    与对象相反
+
+// 函数声明式写法
+function Heading(): React.ReactNode{}
+// 函数扩展式写法
+const OtherHeading: React.FC = () =>{}
+
+
+
+
+
+
+
+小程序
+view 
+
+
+npm init -y
+工具-构建npm
+
+纯数据：
+options： {
+	pureDataPartern：/^_/                  以_开头的是纯数据
+}
+小程序组件：
+pageLifetimes：{
+	show（）{}，
+	hidden（）{}，
+	resize（）{}
+}
+
+子传父
+子：this.triggerEvent(自定义函数，data)
+父：bind:自定义函数=“fn”
+
+给子组件加一个类名tets 	this.selectComponent('.test')
+
+
+

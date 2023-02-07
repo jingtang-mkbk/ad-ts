@@ -1,0 +1,26 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/common/login.jpg') no-repeat ;
+  background-size: cover;
+
+  .login{
+    width: 450px;
+    height: 350px;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+
+    img{
+      margin-bottom: 40px;
+    }
+
+    :global{
+      .ant-btn-primary{
+        width: 100% !important;
+      }
+    }
+  }
+}
