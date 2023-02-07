@@ -51,7 +51,7 @@ const View: React.FC = () => {
                   onClick: () => setCollapsed(!collapsed),
                 })
               }
-              <p>玛卡巴卡科技有限公司</p>
+              <p>玛卡巴卡</p>
             </div>
             <div className={styles.header_right}>
               <img src={require('../../assets/common/head.jpg')} alt="" />
